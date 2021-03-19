@@ -17,8 +17,10 @@ package com.example.androiddevchallenge.ui.presentation.morning.parts
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.offset
+import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
@@ -31,23 +33,53 @@ import com.example.androiddevchallenge.R
 @Composable
 fun trees() {
     Image(
-        painter = painterResource(R.drawable.ic_cloudy_trees),
-        modifier = Modifier.fillMaxWidth()
-            .offset(y = 168.dp),
+        painter = painterResource(R.drawable.ic_tree_1_1),
+        modifier = Modifier.wrapContentHeight()
+            .offset(x = 8.dp, y = 198.dp),
+        contentDescription = null,
+        contentScale = ContentScale.FillWidth
+    )
+    Image(
+        painter = painterResource(R.drawable.ic_tree_1_2),
+        modifier = Modifier.wrapContentHeight()
+            .offset(x = 308.dp, y = 306.dp),
+        contentDescription = null,
+        contentScale = ContentScale.FillWidth
+    )
+    Image(
+        painter = painterResource(R.drawable.ic_tree_1_3),
+        modifier = Modifier.wrapContentHeight()
+            .offset(x = 348.dp, y = 282.dp),
         contentDescription = null,
         contentScale = ContentScale.FillWidth
     )
 }
 
 @SuppressLint("ComposableNaming")
-@Preview
+@Preview(widthDp = 400, heightDp = 510)
 @Composable
 fun treesPreview() {
-    Image(
-        painter = painterResource(R.drawable.ic_cloudy_trees),
-        modifier = Modifier.fillMaxWidth()
-            .offset(y = 168.dp),
-        contentDescription = null,
-        contentScale = ContentScale.FillWidth
-    )
+    Box(modifier = Modifier.fillMaxSize()) {
+        Image(
+            painter = painterResource(R.drawable.ic_tree_1_1),
+            modifier = Modifier.wrapContentHeight()
+                .offset(x = 8.dp, y = 198.dp),
+            contentDescription = null,
+            contentScale = ContentScale.FillWidth
+        )
+        Image(
+            painter = painterResource(R.drawable.ic_tree_1_2),
+            modifier = Modifier.wrapContentHeight()
+                .offset(x = 310.dp, y = 307.dp),
+            contentDescription = null,
+            contentScale = ContentScale.FillWidth
+        )
+        Image(
+            painter = painterResource(R.drawable.ic_tree_1_3),
+            modifier = Modifier.wrapContentHeight()
+                .offset(x = 348.dp, y = 282.dp),
+            contentDescription = null,
+            contentScale = ContentScale.FillWidth
+        )
+    }
 }

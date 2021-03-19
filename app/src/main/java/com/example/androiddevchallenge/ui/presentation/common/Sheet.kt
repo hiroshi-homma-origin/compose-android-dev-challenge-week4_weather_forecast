@@ -31,9 +31,9 @@ import androidx.compose.ui.unit.dp
 fun sheet() {
     Card(
         modifier = Modifier.fillMaxWidth()
-            .height(230.dp)
+            .height(280.dp)
             .offset(y = 530.dp),
-        shape = RoundedCornerShape(28.dp),
+        shape = RoundedCornerShape(topStart = 28.dp, topEnd = 28.dp),
         elevation = 8.dp
     ) {
     }
@@ -47,7 +47,7 @@ fun sheetPreview() {
         modifier = Modifier.fillMaxWidth()
             .height(280.dp)
             .offset(y = 530.dp),
-        shape = RoundedCornerShape(28.dp),
+        shape = RoundedCornerShape(topStart = 28.dp, topEnd = 28.dp),
         elevation = 8.dp
     ) {
     }

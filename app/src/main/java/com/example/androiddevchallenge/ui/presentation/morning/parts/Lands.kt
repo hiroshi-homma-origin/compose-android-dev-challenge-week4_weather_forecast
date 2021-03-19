@@ -17,8 +17,10 @@ package com.example.androiddevchallenge.ui.presentation.morning.parts
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.offset
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
@@ -31,9 +33,9 @@ import com.example.androiddevchallenge.R
 @Composable
 fun lands() {
     Image(
-        painter = painterResource(R.drawable.ic_cloudy_land),
+        painter = painterResource(R.drawable.ic_land1),
         modifier = Modifier.fillMaxWidth()
-            .padding(top = 370.dp),
+            .offset(y = 370.dp),
         contentDescription = null,
         contentScale = ContentScale.FillWidth
     )
@@ -43,11 +45,13 @@ fun lands() {
 @Preview
 @Composable
 fun landsPreview() {
-    Image(
-        painter = painterResource(R.drawable.ic_cloudy_land),
-        modifier = Modifier.fillMaxWidth()
-            .padding(top = 370.dp),
-        contentDescription = null,
-        contentScale = ContentScale.FillWidth
-    )
+    Box(modifier = Modifier.fillMaxSize()) {
+        Image(
+            painter = painterResource(R.drawable.ic_land1),
+            modifier = Modifier.fillMaxWidth()
+                .offset(y = 370.dp),
+            contentDescription = null,
+            contentScale = ContentScale.FillWidth
+        )
+    }
 }

@@ -17,6 +17,8 @@ package com.example.androiddevchallenge.ui.presentation.morning.parts
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.offset
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -43,11 +45,13 @@ fun clouds() {
 @Preview
 @Composable
 fun cloudsPreview() {
-    Image(
-        painter = painterResource(R.drawable.clouds),
-        modifier = Modifier
-            .offset(y = 210.dp),
-        contentDescription = null,
-        contentScale = ContentScale.FillWidth
-    )
+    Box(modifier = Modifier.fillMaxSize()) {
+        Image(
+            painter = painterResource(R.drawable.clouds),
+            modifier = Modifier
+                .offset(y = 210.dp),
+            contentDescription = null,
+            contentScale = ContentScale.FillWidth
+        )
+    }
 }

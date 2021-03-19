@@ -29,7 +29,7 @@ import com.example.androiddevchallenge.R
 @Composable
 fun sky() {
     Image(
-        painter = painterResource(R.drawable.ic_sky_cloudy),
+        painter = painterResource(R.drawable.ic_sky_1),
         modifier = Modifier.fillMaxWidth(),
         contentDescription = null,
         contentScale = ContentScale.FillWidth
@@ -41,7 +41,7 @@ fun sky() {
 @Composable
 fun skyPreview() {
     Image(
-        painter = painterResource(R.drawable.ic_sky_cloudy),
+        painter = painterResource(R.drawable.ic_sky_1),
         modifier = Modifier.fillMaxWidth(),
         contentDescription = null,
         contentScale = ContentScale.FillWidth

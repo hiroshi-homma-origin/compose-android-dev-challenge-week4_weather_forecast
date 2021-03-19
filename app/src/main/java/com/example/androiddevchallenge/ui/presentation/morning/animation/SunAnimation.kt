@@ -24,6 +24,8 @@ import androidx.compose.animation.core.infiniteRepeatable
 import androidx.compose.animation.core.keyframes
 import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.offset
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -203,31 +205,33 @@ fun sunAnimationPreview() {
         )
     )
 
-    Image(
-        painter = painterResource(R.drawable.ic_sun4),
-        modifier = Modifier.offset(x = sunPositionX3.dp, y = sunPositionY3.dp)
-            .alpha(alpha3),
-        contentDescription = null,
-        contentScale = ContentScale.Fit
-    )
-    Image(
-        painter = painterResource(R.drawable.ic_sun3),
-        modifier = Modifier.offset(x = sunPositionX2.dp, y = sunPositionY2.dp)
-            .alpha(alpha2),
-        contentDescription = null,
-        contentScale = ContentScale.Fit
-    )
-    Image(
-        painter = painterResource(R.drawable.ic_sun2),
-        modifier = Modifier.offset(x = sunPositionX1.dp, y = sunPositionY1.dp)
-            .alpha(alpha1),
-        contentDescription = null,
-        contentScale = ContentScale.Fit
-    )
-    Image(
-        painter = painterResource(R.drawable.ic_sun1),
-        modifier = Modifier.offset(x = animePositionX.dp, y = animePositionY.dp),
-        contentDescription = null,
-        contentScale = ContentScale.Fit
-    )
+    Box(modifier = Modifier.fillMaxSize()) {
+        Image(
+            painter = painterResource(R.drawable.ic_sun4),
+            modifier = Modifier.offset(x = sunPositionX3.dp, y = sunPositionY3.dp)
+                .alpha(alpha3),
+            contentDescription = null,
+            contentScale = ContentScale.Fit
+        )
+        Image(
+            painter = painterResource(R.drawable.ic_sun3),
+            modifier = Modifier.offset(x = sunPositionX2.dp, y = sunPositionY2.dp)
+                .alpha(alpha2),
+            contentDescription = null,
+            contentScale = ContentScale.Fit
+        )
+        Image(
+            painter = painterResource(R.drawable.ic_sun2),
+            modifier = Modifier.offset(x = sunPositionX1.dp, y = sunPositionY1.dp)
+                .alpha(alpha1),
+            contentDescription = null,
+            contentScale = ContentScale.Fit
+        )
+        Image(
+            painter = painterResource(R.drawable.ic_sun1),
+            modifier = Modifier.offset(x = animePositionX.dp, y = animePositionY.dp),
+            contentDescription = null,
+            contentScale = ContentScale.Fit
+        )
+    }
 }

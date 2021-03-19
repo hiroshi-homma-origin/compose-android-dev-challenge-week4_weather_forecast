@@ -17,6 +17,8 @@ package com.example.androiddevchallenge.ui.presentation.morning.parts
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
@@ -43,11 +45,13 @@ fun sun() {
 @Preview
 @Composable
 fun sunPreview() {
-    Image(
-        painter = painterResource(R.drawable.ic_sun),
-        modifier = Modifier.fillMaxWidth()
-            .padding(start = 30.dp, top = 60.dp, end = 30.dp),
-        contentDescription = null,
-        contentScale = ContentScale.FillWidth
-    )
+    Box(modifier = Modifier.fillMaxSize()) {
+        Image(
+            painter = painterResource(R.drawable.ic_sun),
+            modifier = Modifier.fillMaxWidth()
+                .padding(start = 30.dp, top = 60.dp, end = 30.dp),
+            contentDescription = null,
+            contentScale = ContentScale.FillWidth
+        )
+    }
 }

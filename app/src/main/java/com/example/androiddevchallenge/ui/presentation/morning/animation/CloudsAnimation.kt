@@ -22,6 +22,8 @@ import androidx.compose.animation.core.infiniteRepeatable
 import androidx.compose.animation.core.keyframes
 import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.offset
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -49,7 +51,7 @@ fun cloudsAnimation() {
     )
 
     Image(
-        painter = painterResource(R.drawable.cloudy),
+        painter = painterResource(R.drawable.clouds),
         modifier = Modifier.scale(1.32f)
             .offset(startPosition.dp, y = 190.dp),
         contentDescription = null,
@@ -73,11 +75,13 @@ fun cloudsAnimationPreview() {
         )
     )
 
-    Image(
-        painter = painterResource(R.drawable.cloudy),
-        modifier = Modifier.scale(1.32f)
-            .offset(startPosition.dp, y = 190.dp),
-        contentDescription = null,
-        contentScale = ContentScale.FillWidth
-    )
+    Box(modifier = Modifier.fillMaxSize()) {
+        Image(
+            painter = painterResource(R.drawable.clouds),
+            modifier = Modifier.scale(1.32f)
+                .offset(startPosition.dp, y = 190.dp),
+            contentDescription = null,
+            contentScale = ContentScale.FillWidth
+        )
+    }
 }
