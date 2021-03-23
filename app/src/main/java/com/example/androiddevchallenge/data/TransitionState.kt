@@ -13,13 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge.ui.theme
+package com.example.androiddevchallenge.data
 
-import androidx.compose.ui.graphics.Color
-
-val primary = Color(0xFFFFF1F1)
-val secondary = Color(0xFF3F2C2C)
-val primaryDark = Color(0xFF2D3B2D)
-val secondaryDark = Color(0xFFB8C9B8)
-val trans = Color(0x00000000)
-val trans1 = Color(0x44000000)
+enum class TransitionState {
+    POSITIVE,
+    NEGATIVE,
+    PENDING
+}
