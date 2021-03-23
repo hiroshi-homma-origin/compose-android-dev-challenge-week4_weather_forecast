@@ -26,8 +26,8 @@ import com.example.androiddevchallenge.ui.screen.night.nightScreen
 @Composable
 fun myAppContent() {
     Surface {
-//        dayScreen()
-        nightScreen()
+        dayScreen()
+//        nightScreen()
     }
 }
 

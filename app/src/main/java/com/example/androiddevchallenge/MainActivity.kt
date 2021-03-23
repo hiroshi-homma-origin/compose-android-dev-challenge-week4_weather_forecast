@@ -23,6 +23,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.core.view.WindowCompat
 import com.example.androiddevchallenge.ui.myAppContent
 import com.example.androiddevchallenge.ui.myAppContentDayPreview
 import com.example.androiddevchallenge.ui.myAppContentNightPreview
